@@ -6,12 +6,32 @@
            [clara.examples.booleans :as booleans]
            [clara.examples.fact-type-options :as type-opts]
            [clara.examples.truth-maintenance :as truth]
+           [clara.examples.lp_rules :as lp_rules]
+           [clara.examples.welltest :as welltest]
            [clara.rules :as r]))
 
 (defn -main []
+  (println "well test rules examples:")
+  (welltest/run-examples)
+  (println)
+
+(comment
+  (println "LP rules examples:")
+  (lp_rules/run-examples)
+  (println)
+
   (println "Shopping examples:")
   (shopping/run-examples)
   (println)
+)
+
+(comment
+  (println "LP rules examples:")
+  (lp_rules/run-examples)
+  (println)
+)
+
+(comment
   (println "JavaBean Shopping examples from Clojure:")
   (jshopping/run-examples)
   (println)
@@ -33,4 +53,6 @@
   (type-opts/run-examples)
   (println)
   (println "Truth maintenance examples: ")
-  (truth/run-examples))
+  (truth/run-examples)
+)
+  )
