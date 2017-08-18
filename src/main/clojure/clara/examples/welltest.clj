@@ -4,6 +4,8 @@
 (defrecord well-test [oil-rate water-rate form-gas-rate
       lift-gas-rate prod-press inj-press choke-diam ])
 
+;; Add accumator for number of well tests with negative oil rate
+
 (defrule positive-oil
   "Find if well has positive oil rate"
   [well-test (> oil-rate 0.0 ) (= ?oil-rate oil-rate)]
